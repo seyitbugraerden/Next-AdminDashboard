@@ -1,5 +1,6 @@
+import ImageKit from "imagekit";
 import config from "@/lib/config";
-import imageKit from "imagekit";
+
 import { NextResponse } from "next/server";
 
 const {
@@ -8,10 +9,10 @@ const {
   },
 } = config;
 
-const imagekit = new imageKit({
-  publicKey: publicKey,
-  privateKey: privateKey,
-  urlEndpoint: urlEndpoint,
+const imagekit = new ImageKit({
+  publicKey: publicKey as string,
+  privateKey: privateKey as string,
+  urlEndpoint: urlEndpoint as string,
 });
 
 export async function GET() {

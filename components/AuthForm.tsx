@@ -72,14 +72,7 @@ const AuthForm = ({ type, schema, defaultValues, onSubmit }: Props<T>) => {
                   </FormLabel>
                   <FormControl>
                     {field.name === "universityCard" ? (
-                      <ImageUpload
-                        type="image"
-                        accept="image/*"
-                        placeholder="Upload your ID"
-                        folder="ids"
-                        variant="dark"
-                        onFileChange={field.onChange}
-                      />
+                      <ImageUpload onFileChange={field.onChange} />
                     ) : (
                       <Input
                         required
