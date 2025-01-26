@@ -1,7 +1,7 @@
 "use client";
 import { toast } from "@/hooks/use-toast";
 import config from "@/lib/config";
-import { cn } from "@/lib/utils"; 
+import { cn } from "@/lib/utils";
 import { IKImage, ImageKitProvider, IKUpload } from "imagekitio-next";
 import Image from "next/image";
 import { useRef, useState } from "react";
@@ -14,7 +14,7 @@ const {
 
 const authenticator = async () => {
   try {
-    const response = await fetch(`${config.env.apiEndpoint}/api/auth/imagekit`);
+    const response = await fetch(`${config.env.apiEndpoint}/api/imagekit`);
 
     if (!response.ok) {
       const errorText = await response.text();
